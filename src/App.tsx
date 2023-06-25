@@ -34,7 +34,7 @@ const App = () => {
       }
     };
     const curve = () => {
-      ctx.clearRect(0, 0, 600, 500);
+      ctx.clearRect(0, 0, 700, 400);
       if (isCurving) {
         ctx.beginPath();
         ctx.moveTo(startX, startY);
