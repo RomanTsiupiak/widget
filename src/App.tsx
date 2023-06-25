@@ -7,8 +7,8 @@ const App = () => {
     const bounds = canvas.getBoundingClientRect();
     const ctx = canvas.getContext('2d');
 
-    canvas.height = 500;
-    canvas.width = 600;
+    canvas.width = 700;
+    canvas.height = 400;
 
     let isDrawing = false;
     let isCurving = false;
@@ -23,16 +23,13 @@ const App = () => {
     if (!ctx) return;
 
     const draw = () => {
-      ctx.clearRect(0, 0, 600, 500);
-      ctx.save();
-
+      ctx.clearRect(0, 0, 700, 400);
       if (isDrawing) {
         ctx.strokeStyle = 'red';
-        ctx.lineWidth = 6;
+        ctx.lineWidth = 4;
         ctx.beginPath();
         ctx.moveTo(startX, startY);
         ctx.lineTo(mouseX, mouseY);
-        ctx.arc(mouseX, mouseY, 5, 0, Math.PI * 2, false);
         ctx.stroke();
       }
     };
